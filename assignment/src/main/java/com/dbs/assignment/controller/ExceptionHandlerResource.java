@@ -1,9 +1,8 @@
-package com.dbs.assignment.Controller;
+package com.dbs.assignment.controller;
 
-import com.dbs.assignment.Exception.FileNotValidException;
-import com.dbs.assignment.Exception.MarginNotFoundException;
-import com.dbs.assignment.Model.ErrorResponse;
-import org.springframework.context.annotation.Configuration;
+import com.dbs.assignment.exception.FileNotValidException;
+import com.dbs.assignment.exception.MarginNotFoundException;
+import com.dbs.assignment.model.ErrorResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

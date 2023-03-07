@@ -1,6 +1,4 @@
-package com.dbs.assignment.Exception;
-
-import java.util.List;
+package com.dbs.assignment.exception;
 
 public class FileNotValidException extends RuntimeException {
 

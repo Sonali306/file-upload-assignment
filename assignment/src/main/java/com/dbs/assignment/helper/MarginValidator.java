@@ -1,8 +1,7 @@
-package com.dbs.assignment.Helper;
+package com.dbs.assignment.helper;
 
-import com.dbs.assignment.Exception.FileNotValidException;
-import com.dbs.assignment.Model.Margin;
-import org.springframework.stereotype.Component;
+import com.dbs.assignment.exception.FileNotValidException;
+import com.dbs.assignment.model.Margin;
 
 import java.util.ArrayList;
 import java.util.List;

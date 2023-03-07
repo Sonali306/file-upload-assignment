@@ -1,10 +1,9 @@
-package com.dbs.assignment.Controller;
+package com.dbs.assignment.controller;
 
-import com.dbs.assignment.Exception.FileNotValidException;
-import com.dbs.assignment.Helper.CSVHelper;
-import com.dbs.assignment.Model.FindMarginPayLoad;
-import com.dbs.assignment.Model.Margin;
-import com.dbs.assignment.Service.MarginService;
+import com.dbs.assignment.helper.CSVHelper;
+import com.dbs.assignment.model.FindMarginPayLoad;
+import com.dbs.assignment.model.Margin;
+import com.dbs.assignment.service.MarginService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.core.io.Resource;

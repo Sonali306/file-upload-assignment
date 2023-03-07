@@ -1,4 +1,4 @@
-package com.dbs.assignment.Model;
+package com.dbs.assignment.model;
 
 public class ErrorResponse {
     String message;

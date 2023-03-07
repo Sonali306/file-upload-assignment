@@ -1,10 +1,10 @@
-package com.dbs.assignment.Service;
+package com.dbs.assignment.service;
 
-import com.dbs.assignment.Exception.MarginNotFoundException;
-import com.dbs.assignment.Helper.CSVHelper;
-import com.dbs.assignment.Model.FindMarginPayLoad;
-import com.dbs.assignment.Model.Margin;
-import com.dbs.assignment.Repository.MarginRepository;
+import com.dbs.assignment.exception.MarginNotFoundException;
+import com.dbs.assignment.helper.CSVHelper;
+import com.dbs.assignment.model.FindMarginPayLoad;
+import com.dbs.assignment.model.Margin;
+import com.dbs.assignment.repository.MarginRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;

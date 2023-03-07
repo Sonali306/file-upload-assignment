@@ -1,6 +1,4 @@
-package com.dbs.assignment.Model;
-
-import net.bytebuddy.dynamic.loading.InjectionClassLoader;
+package com.dbs.assignment.model;
 
 import javax.persistence.*;
 

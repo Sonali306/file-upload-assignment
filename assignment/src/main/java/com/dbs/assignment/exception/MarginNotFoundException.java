@@ -1,4 +1,4 @@
-package com.dbs.assignment.Exception;
+package com.dbs.assignment.exception;
 
 public class MarginNotFoundException extends RuntimeException {
 

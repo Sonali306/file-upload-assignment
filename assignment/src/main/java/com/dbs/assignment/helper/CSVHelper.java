@@ -1,8 +1,7 @@
-package com.dbs.assignment.Helper;
+package com.dbs.assignment.helper;
 
-import com.dbs.assignment.Model.Margin;
+import com.dbs.assignment.model.Margin;
 import org.apache.commons.csv.*;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 

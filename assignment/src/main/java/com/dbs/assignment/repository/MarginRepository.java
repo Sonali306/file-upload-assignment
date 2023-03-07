@@ -1,6 +1,6 @@
-package com.dbs.assignment.Repository;
+package com.dbs.assignment.repository;
 
-import com.dbs.assignment.Model.Margin;
+import com.dbs.assignment.model.Margin;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
