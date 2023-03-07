@@ -36,7 +36,6 @@ public class MarginValidator {
         return false;
     }
     public  static void validateMargin(Margin margin) {
-        System.out.println("Inside Validation");
         List<String> exceptions = new ArrayList<>();
 
         if(!"*".equals(margin.getBaseCcy()) && margin.getBaseCcy().length()!=3) {

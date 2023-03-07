@@ -44,7 +44,6 @@ public class MarginService {
         if(margins.size()==0) {
             throw new MarginNotFoundException("Margin Not found");
         }
-        System.out.println(margins.get(0));
         return margins.get(0);
     }
 }

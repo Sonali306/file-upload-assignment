@@ -22,7 +22,6 @@ public class MarginController {
     MarginService marginService;
     @PostMapping("/upload")
     public ResponseEntity<String> uploadMargins(@RequestParam("file") MultipartFile file ){
-        System.out.println("Inside Upload");
         String message = "";
         if(CSVHelper.hasCSVFormat(file)) {
 
@@ -48,7 +47,6 @@ public class MarginController {
 
     @PostMapping("/find")
     public ResponseEntity<Margin> find(@RequestBody FindMarginPayLoad payLoad){
-        System.out.println(payLoad.toString());
         Margin margin = marginService.findMarginByPayLoad(payLoad);
         return new ResponseEntity<>(margin,HttpStatus.OK);
     }
