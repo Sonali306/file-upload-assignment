@@ -1,0 +1,55 @@
+package com.dbs.assignment.Controller;
+
+import com.dbs.assignment.Exception.FileNotValidException;
+import com.dbs.assignment.Helper.CSVHelper;
+import com.dbs.assignment.Model.FindMarginPayLoad;
+import com.dbs.assignment.Model.Margin;
+import com.dbs.assignment.Service.MarginService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.InputStreamResource;
+import org.springframework.core.io.Resource;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+
+@RestController
+public class MarginController {
+
+    @Autowired
+    MarginService marginService;
+    @PostMapping("/upload")
+    public ResponseEntity<String> uploadMargins(@RequestParam("file") MultipartFile file ){
+        System.out.println("Inside Upload");
+        String message = "";
+        if(CSVHelper.hasCSVFormat(file)) {
+
+                marginService.save(file);
+                message = "Uploaded the file successfully: " + file.getOriginalFilename();
+                return new ResponseEntity<>(message,HttpStatus.OK);
+
+        }
+        message = "Invalid File Format";
+        return new ResponseEntity<>(message,HttpStatus.BAD_REQUEST);
+    }
+
+    @GetMapping("/download")
+    public ResponseEntity<Resource> getFile() {
+        String filename = "tutorials.csv";
+        InputStreamResource file = new InputStreamResource(marginService.load());
+
+        return ResponseEntity.ok()
+                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=" + filename)
+                .contentType(MediaType.parseMediaType("application/csv"))
+                .body(file);
+    }
+
+    @PostMapping("/find")
+    public ResponseEntity<Margin> find(@RequestBody FindMarginPayLoad payLoad){
+        System.out.println(payLoad.toString());
+        Margin margin = marginService.findMarginByPayLoad(payLoad);
+        return new ResponseEntity<>(margin,HttpStatus.OK);
+    }
+}
